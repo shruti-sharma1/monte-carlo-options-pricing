@@ -24,17 +24,3 @@ Using Ito's Lemma, the exact discrete-time step mapping for a trajectory path is
 $$S_{t+\Delta t} = S_t \exp\left( \left(r - \frac{1}{2}\sigma^2\right)\Delta t + \sigma \sqrt{\Delta t} Z \right)$$
 
 Where $Z \sim N(0,1)$.
-
-### Variance Reduction (Antithetic Variates)
-For every random path generated using $Z$, a twin antithetic path is simultaneously generated using $-Z$. This induces a negative correlation between simulated payoffs, vastly accelerating standard error decay:
-
-$$\text{Var}\left(\frac{Y + Y^*}{2}\right) = \frac{1}{4} \left[ \text{Var}(Y) + \text{Var}(Y^*) + 2\text{Cov}(Y, Y^*) \right]$$
-
----
-
-## Installation & Setup
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/yourusername/monte-carlo-exotic-engine.git](https://github.com/yourusername/monte-carlo-exotic-engine.git)
-   cd monte-carlo-exotic-engine
